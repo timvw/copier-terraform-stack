@@ -15,7 +15,7 @@ stack_name:
 
 instance:
   type: str
-  default: "dev-demo"
+  default: "dev"
   help: "Instance name (folder under terraform/stacks/<stack>/instances); environment is inferred from the prefix before '-'"
 
 environment:
