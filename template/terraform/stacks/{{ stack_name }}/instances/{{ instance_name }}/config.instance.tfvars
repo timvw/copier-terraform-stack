@@ -1,1 +1,1 @@
-environment = "{{ instance_name }}"
+environment = "{{ environment_name }}"

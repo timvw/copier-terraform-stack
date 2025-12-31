@@ -13,7 +13,12 @@ stack_name:
   default: "demo"
   help: "Stack name (folder under terraform/stacks)"
 
-instance_name:
+environment_name:
   type: str
   default: "dev"
-  help: "Instance/environment name (folder under terraform/stacks/<stack>/instances)"
+  help: "Environment/account name (e.g. dev, stage, prod)"
+
+instance_name:
+  type: str
+  default: "{{ environment_name }}"
+  help: "Instance name (folder under terraform/stacks/<stack>/instances); defaults to environment"

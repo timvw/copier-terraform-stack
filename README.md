@@ -11,7 +11,8 @@ copier copy https://github.com/timvw/copier-terraform-stack.git .
 Prompts:
 - `project_name`: used in the backend state key
 - `stack_name`: folder name under `terraform/stacks`
-- `instance_name`: folder name under `terraform/stacks/<stack>/instances` and the value for `environment`
+- `environment_name`: environment/account name (e.g. dev, stage, prod)
+- `instance_name`: folder name under `terraform/stacks/<stack>/instances` (defaults to `environment_name`)
 
 ## Output
 Creates:
