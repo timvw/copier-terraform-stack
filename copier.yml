@@ -13,12 +13,13 @@ stack_name:
   default: "demo"
   help: "Stack name (folder under terraform/stacks)"
 
-environment_name:
-  type: str
-  default: "dev"
-  help: "Environment/account name (e.g. dev, stage, prod)"
-
 instance_name:
   type: str
-  default: "{{ environment_name }}"
-  help: "Instance name (folder under terraform/stacks/<stack>/instances); defaults to environment"
+  default: "dev-demo"
+  help: "Instance name (folder under terraform/stacks/<stack>/instances); environment is inferred from the prefix before '-'"
+
+environment_name:
+  type: str
+  default: "{{ instance_name.split('-')[0] if '-' in instance_name else instance_name }}"
+  help: "Environment/account name (derived from instance_name)"
+  when: false
