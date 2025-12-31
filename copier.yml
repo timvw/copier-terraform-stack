@@ -1,0 +1,19 @@
+_min_copier_version: "9.0.0"
+_answers_file: .copier-answers.yml
+_subdirectory: template
+_templates_suffix: ""
+
+project_name:
+  type: str
+  default: "{{ _folder_name }}"
+  help: "Project name used in state key"
+
+stack_name:
+  type: str
+  default: "demo"
+  help: "Stack name (folder under terraform/stacks)"
+
+instance_name:
+  type: str
+  default: "dev"
+  help: "Instance/environment name (folder under terraform/stacks/<stack>/instances)"
