@@ -13,6 +13,11 @@ stack_name:
   default: "demo"
   help: "Stack name (folder under terraform/stacks)"
 
+aws_account_id:
+  type: str
+  default: "{{ env.get('AWS_ACCOUNT_ID', 'xxxx') }}"
+  help: "AWS account ID used to prefix backend bucket/table names"
+
 instance:
   type: str
   default: "dev"

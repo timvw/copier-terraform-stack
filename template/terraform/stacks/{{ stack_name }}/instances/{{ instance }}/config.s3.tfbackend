@@ -1,4 +1,4 @@
 key = "project={{ project_name }}/stack={{ stack_name }}/instance={{ instance }}/terraform.tfstate"
-bucket = "xxxx-terraform-state"
-dynamodb_table = "xxxx-terraform-state-lock"
+bucket = "{{ aws_account_id }}-terraform-state"
+dynamodb_table = "{{ aws_account_id }}-terraform-state-lock"
 region = "eu-central-1"
