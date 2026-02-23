@@ -20,4 +20,4 @@ Creates:
 - `terraform/stacks/<stack_name>/providers.tf`
 - `terraform/stacks/<stack_name>/tags.tf`
 - `terraform/stacks/<stack_name>/instances/<instance>/config.instance.tfvars`
-- `terraform/stacks/<stack_name>/instances/<instance>/config.s3.tfbackend`
+- `terraform/stacks/<stack_name>/instances/<instance>/config.tfbackend`
